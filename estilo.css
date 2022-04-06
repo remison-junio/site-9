@@ -1,0 +1,75 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+}
+
+header {
+	background-color: #1f2229;
+}
+
+header .container {
+	min-height: 40px;
+	padding-top: 10px;
+	align-items: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	position: relative;
+}
+
+header .logo img {
+	width: 145px;
+	margin-left: 15px;
+}
+
+.btn-menu {
+	position: absolute;
+	right: 20px;
+	top: 12px;
+}
+
+nav {
+	background-color: #262930;
+	margin-top: 5px;
+	left: 0;
+	right: 0;
+	padding: 15px 15px 10px;
+
+	display: none;
+}
+
+nav .menu li a {
+	font-size: 14px;
+	color: white;
+	border-top: 1px solid rgba(255, 255, 255, .1);
+	display: block;
+	padding: 11px 0;
+}
+
+nav .contatos {
+	border-top: 1px solid rgba(255, 255, 255, .1);
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+}
+
+nav .contatos .numero {
+	color: white;
+	margin-right: 20px;
+}
+
+nav .contatos a {
+	color: white;
+	padding: 3px 15px;
+	border-radius: 3px;
+	font-size: 13px;
+	font-weight: 700;
+	transition: .3s;
+}
+
+nav .contatos a:hover {
+	background-color: white;
+	color: #262930;
+}
