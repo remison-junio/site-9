@@ -6,6 +6,8 @@
 	text-decoration: none;
 }
 
+/*Header*/
+
 header {
 	background-color: #1f2229;
 }
@@ -72,4 +74,131 @@ nav .contatos a {
 nav .contatos a:hover {
 	background-color: white;
 	color: #262930;
+}
+
+/*Home*/
+
+.home {
+	background-image: url(imagens/home-bg.jpg);
+	background-position: center center;
+	height: 330px;
+	display: flex;
+}
+
+.home .container {
+	text-align: center;
+	margin: auto 0;
+}
+
+.home h2 {
+	color: white;
+	font-size: 40px;
+	font-weight: 300;
+	margin-bottom: 15px;
+	margin-top: -30px;
+}
+
+.home p {
+	font-family: 'Playfair Display', serif;
+	color: white;
+	font-size: 16px;
+	margin-bottom: 40px;
+	line-height: 1.12;
+}
+
+.home form {
+	position: relative;
+}
+
+.home input {
+	width: 100%;
+	font-size: 15px;
+	padding: 20px 30px;
+	border: 2px solid white;
+	background-color: transparent;
+	color: white;
+	border-radius: 3px;
+}
+
+.home input:focus {
+	outline: 0;
+	background-color: white;
+	color: #000;
+}
+
+.home button {
+	position: absolute;
+	top: 4px;
+	right: 3px;
+	bottom: 4px;
+	width: 80px;
+	cursor: pointer;
+	background-color: white;
+	border: 1px solid white;
+	color: black;
+	transition: .3s;
+	border-radius: 3px;
+}
+
+.home button:hover {
+	background-color: transparent;
+	color: white;
+}
+
+/*Seção Logos*/
+
+.logos {
+	background-color: #1f2229;
+} 
+
+.logos .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 40px 0;
+
+} 
+
+.logos img {
+	width: 170px;
+	height: 80px;
+	object-fit: cover;
+	opacity: 0.5;
+	border: 1px solid red;
+	padding: 15px;
+} 
+
+/*Seção 3*/
+
+.secao-3 {
+	border: 1px solid red;
+}
+
+.secao-3 .card-1 img {
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.secao-3 .card-1 p {
+	font-family: 'Playfair Display', serif;
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 18px;
+}
+
+.secao-3 .card-servicos {
+	border: 1px solid red;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.secao-3 .card-servicos h4 {
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+
+.secao-3 .card-servicos p {
+	font-size: 14px;
+	color: #888888;
 }
