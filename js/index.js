@@ -1,6 +1,6 @@
 $(document).ready(()=> {
-	$('.btn-menu').on('click', (e)=> {
+	$('.btn-menu').on('click', e => {
 		e.preventDefault()
-		$('#barra-navegacao').toggle()
+		$('#barra-navegacao, .btn-menu').toggleClass('active')
 	})
 })
