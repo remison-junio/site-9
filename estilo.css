@@ -23,7 +23,7 @@ header {
 
 header .container {
 	min-height: 50px;
-	padding: 10px 0;
+	padding: 5px 0;
 
 	position: relative;
 }
@@ -37,7 +37,21 @@ header .logo img {
 .btn-menu {
 	position: absolute;
 	right: 20px;
-	top: 12px;
+	top: 10px;
+	color: white;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	font-size: 21px;
+}
+
+.btn-menu .abrir, .btn-menu.active .fechar {
+	display: block;
+	margin: auto;
+}
+
+.btn-menu.active .abrir, .btn-menu .fechar {
+	display: none;
 }
 
 nav {
@@ -49,16 +63,16 @@ nav {
 	display: none;
 }
 
+nav.active {
+	display: block;
+}
+
 nav .menu li a {
 	font-size: 14px;
 	color: white;
 	border-top: 1px solid rgba(255, 255, 255, .1);
 	display: block;
 	padding: 11px 0;
-}
-
-nav .menu li a:hover {
-	border-color: rgba(255, 255, 255, .2);
 }
 
 nav .contatos {
@@ -596,7 +610,7 @@ footer .redes-sociais i {
 		align-items: center;
 		position: relative;
 		justify-content: space-between;
-		padding: 0 20px;
+		padding: 5px 20px;
 		max-width: 1200px;
 	}
 
@@ -605,6 +619,10 @@ footer .redes-sociais i {
 		padding: 0;
 		background-color: transparent;
 		margin-top: -2px;
+	}
+
+	nav.active {
+		display: flex;
 	}
 
 	nav .menu {
