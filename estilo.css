@@ -21,6 +21,13 @@ header {
 	background-color: #1f2229;
 }
 
+header.fixo {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
 header .container {
 	min-height: 50px;
 	padding: 5px 0;
@@ -389,7 +396,6 @@ nav .contatos i {
 	font-family: 'Playfair Display', serif;
 	font-size: 20px;
 	font-weight: 300;
-	border: 1px solid red;
 }
 
 .secao-6 .btn {
@@ -584,7 +590,6 @@ footer .redes-sociais i {
 
 	.secao-6 .card {
 		padding: 60px 0;
-		border: 2px solid #888888;
 	}
 
 	footer {
@@ -783,4 +788,26 @@ footer .redes-sociais i {
 	footer .container {
 		justify-content: space-between;
 	}
+}
+
+[data-animacao] {
+	transition: .5s;
+	opacity: 0;
+}
+
+[data-animacao="baixo"] {
+	transform: translateY(50px);
+}
+
+[data-animacao="esquerda"] {
+	transform: translateX(-100px);
+}
+
+[data-animacao="direita"] {
+	transform: translateX(100px);
+}
+
+[data-animacao].animar {
+	opacity: 1;
+	transform: translate(0);
 }
