@@ -22,6 +22,7 @@ header {
 }
 
 header.fixo {
+	top: 0;
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -30,8 +31,7 @@ header.fixo {
 
 header .container {
 	min-height: 50px;
-	padding: 5px 0;
-
+	padding: 5px 0 0;
 	position: relative;
 }
 
@@ -183,6 +183,11 @@ nav .contatos i {
 	color: white;
 }
 
+.home button.active:hover {
+	border-color: black;
+	color: black;
+}
+
 .home i {
 	font-size: 25px;
 }
@@ -211,6 +216,7 @@ nav .contatos i {
 
 .secao-3 {
 	padding: 20px 0 70px;
+	overflow: hidden;
 }
 
 .secao-3 .container {
@@ -308,6 +314,7 @@ nav .contatos i {
 	background-image: url(imagens/secao-5-bg.jpg);
 	height: 700px;
 	color: black;
+	overflow: hidden;
 }
 
 .secao-5 .container {
@@ -474,7 +481,7 @@ footer .navegacao {
 	margin-bottom: 35px;
 }
 
-footer .navegacao a {
+footer .navegacao a, footer .navegacao .copy {
 	color: white;
 	font-size: 11px;
 	font-weight: 400;
@@ -506,7 +513,7 @@ footer .navegacao .termos {
 	padding-left: 15px;
 }
 
-footer .navegacao .landing {
+footer .navegacao .copy {
 	margin-top: 5px;
 }
 
@@ -791,7 +798,7 @@ footer .redes-sociais i {
 }
 
 [data-animacao] {
-	transition: .5s;
+	transition: transform .3s;
 	opacity: 0;
 }
 
@@ -804,10 +811,10 @@ footer .redes-sociais i {
 }
 
 [data-animacao="direita"] {
-	transform: translateX(100px);
+	transform: translate(100px);
 }
 
 [data-animacao].animar {
 	opacity: 1;
-	transform: translate(0);
+	transform: translateX(0);
 }

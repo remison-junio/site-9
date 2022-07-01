@@ -12,7 +12,7 @@ $(document).ready(()=> {
 		}
 	})
 
-	$('.menu a[href^="#"]').on('click', (e)=> {
+	$('.menu a[href^="#"]').on('click', e => {
 		e.preventDefault()
 
 		$('#barra-navegacao, .btn-menu').removeClass('active')
@@ -25,22 +25,27 @@ $(document).ready(()=> {
 		}, 800);
 	})
 
-	const debounce = function(func, wait, immediate) {
-	  let timeout;
-	  return function(...args) {
-	    const context = this;
-	    const later = function () {
-	      timeout = null;
-	      if (!immediate) func.apply(context, args);
-	    };
-	    const callNow = immediate && !timeout;
-	    clearTimeout(timeout);
-	    timeout = setTimeout(later, wait);
-	    if (callNow) func.apply(context, args);
-	  };
-	};
-	
+	$('#formulario').on('submit', e => e.preventDefault())
 
+	$('#cadastroEmail').on('focus', ()=> $('#btn-cadastrar').addClass('active'))
+
+	$('#cadastroEmail').on('blur', ()=> $('#btn-cadastrar').removeClass('active'))
+
+const debounce = function(func, wait, immediate) {
+	let timeout
+	return function(...args) {
+		const context = this
+		const later = function () {
+			timeout = null
+			if (!immediate) func.apply(context, args)
+		}
+		const callNow = immediate && !timeout
+		clearTimeout(timeout)
+		timeout = setTimeout(later, wait)
+		if (callNow) func.apply(context, args)
+	}
+}
+	
 	function animacao(){
 		$.each($('[data-animacao]'), (indice, valor)=> {
 			const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
@@ -56,6 +61,6 @@ $(document).ready(()=> {
 	if($('[data-animacao]').length) {
 	  $(window).scroll(debounce(function() {
 	   animacao()
-	  }, 200))
+	  }, 100))
 	}
 })

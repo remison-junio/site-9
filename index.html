@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
+		<title>R. Genesis</title>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +13,8 @@
 
 		<link rel="stylesheet" type="text/css" href="estilo.css">
 	</head>
-	<body>
 
-		<!--Link referência http://landingpages.rgenesis.com/demos/index-business-03.html-->
+	<body>
 		<header>
 			<div class="container">
 				<a href="" class="logo">
@@ -30,11 +29,15 @@
 				<nav id="barra-navegacao">
 					<ul class="menu">
 						<li>
-							<a href="#sobre">About</a>
+							<a href="#home">Home</a>
 						</li>
 
 						<li>
 							<a href="#servicos">Services</a>
+						</li>
+
+						<li>
+							<a href="#sobre">About</a>
 						</li>
 
 						<li>
@@ -54,7 +57,7 @@
 		</header>
 
 		<main>
-			<section class="home">
+			<section id="home" class="home">
 				<div class="container">
 					<div>
 						<h2 data-animacao="baixo">R.Gen Pack</h2>
@@ -62,9 +65,9 @@
 							Explore a new way of showcase your business with powerful and easy to setup R.Gen multi-purpose landing pages
 						</p>
 
-						<form data-animacao="baixo">
-							<input type="email" placeholder="Enter your email">
-							<button type="submit">
+						<form id="formulario" data-animacao="baixo">
+							<input id="cadastroEmail" type="email" placeholder="Enter your email" required>
+							<button id="btn-cadastrar">
 								<i class="fa-solid fa-envelope"></i>
 							</button>
 						</form>
@@ -178,6 +181,7 @@
 				<div class="container">
 					
 					<h3 data-animacao="">Our achievements</h3>
+					
 					<p data-animacao="" class="sub-titulo">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
 					</p>
@@ -249,8 +253,8 @@
 						<a href="">Terms and conditions</a>
 					</li>
 
-					<li class="landing">
-						<a href="">R.Gen - landing pages © 2022</a>
+					<li class="copy">
+						<p>© Copyright 2022. All Rights Reserved</p>
 					</li>
 				</ul>
 
@@ -277,6 +281,7 @@
 				</ul>
 			</div>
 		</footer>
+
 		<script src="js/jquery-3.6.0.min.js"></script>
 		<script src="js/index.js"></script>
 	</body>
